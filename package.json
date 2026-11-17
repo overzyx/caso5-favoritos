@@ -1,0 +1,32 @@
+{
+  "name": "caso5-favoritos-playlearn",
+  "version": "1.0.0",
+  "description": "Caso 5 Play&Learn - Etapa 6: automatizacion de Favoritos (US-615/616) con Playwright-BDD",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test --project=chromium",
+    "test:smoke": "bddgen && playwright test --project=chromium --grep @smoke --workers=1",
+    "test:p1": "bddgen && playwright test --project=chromium --grep @P1",
+    "test:regresion": "bddgen && playwright test --project=chromium --grep @regresion --workers=1",
+    "test:headed": "bddgen && playwright test --project=chromium --headed",
+    "test:ui": "bddgen && playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://practicesoftwaretesting.com",
+    "steps": "bddgen export",
+    "reporte": "node scripts/abrir-reporte.mjs --listar",
+    "test:favoritos": "bddgen && playwright test --project=chromium --grep @favoritos --workers=1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10",
+    "playwright-bdd": "^9.2.1",
+    "typescript": "^7.0.2"
+  }
+}

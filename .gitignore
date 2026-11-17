@@ -1,0 +1,7 @@
+node_modules/
+.features-gen/
+reportes/
+test-results/
+playwright-report/
+blob-report/
+.env
